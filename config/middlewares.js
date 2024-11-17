@@ -7,9 +7,9 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:', 'http:', 'https://ondrejvojik.github.io/ecommerce-client'],
-          'img-src': ["'self'", 'data:', 'blob:', 'https://ondrejvojik.github.io/ecommerce-client'],
-          'media-src': ["'self'", 'data:', 'blob:', 'https://ondrejvojik.github.io/ecommerce-client'],
+          'connect-src': ["'self'", 'https:', 'http:', 'https://ondrejvojik.github.io', 'https://ondrejvojik.github.io/ecommerce-client'],
+          'img-src': ["'self'", 'data:', 'blob:', 'https://ondrejvojik.github.io', 'https://ondrejvojik.github.io/ecommerce-client'],
+          'media-src': ["'self'", 'data:', 'blob:', 'https://ondrejvojik.github.io', 'https://ondrejvojik.github.io/ecommerce-client'],
           upgradeInsecureRequests: null,
         },
       },
@@ -18,7 +18,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://ondrejvojik.github.io/ecommerce-client'], // Allow requests from your local development environment
+      origin: ['https://ondrejvojik.github.io', 'https://ondrejvojik.github.io/ecommerce-client'], // Allow requests from your local development environment
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       keepHeadersOnError: true,
